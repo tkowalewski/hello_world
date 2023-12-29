@@ -8,6 +8,7 @@ module HelloWorld
 
     initializer "hello_world-engine.assets" do |app|
       app.config.assets.precompile += %w[hello_world_manifest.js]
+      app.config.assets.paths << Engine.root.join('app', 'components')
     end
   end
 end
